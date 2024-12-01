@@ -1,8 +1,6 @@
 use std::vec;
-
 use macros::FlattenF32;
-
-use crate::flatten::Flatten;
+use crate::Flatten;
 
 #[derive(Debug)]
 struct Model {

@@ -1,4 +1,4 @@
-use crate::flatten::Flatten;
+use crate::Flatten;
 
 impl Flatten<f64> for u8 {
     fn flatten(&self) -> Vec<f64> {
@@ -43,6 +43,19 @@ impl Flatten<f64> for u64 {
 }
 
 impl Flatten<f64> for i64 {
+    fn flatten(&self) -> Vec<f64> {
+        vec![*self as f64]
+    }
+}
+
+
+impl Flatten<f64> for f32 {
+    fn flatten(&self) -> Vec<f64> {
+        vec![*self as f64]
+    }
+}
+
+impl Flatten<f64> for f64 {
     fn flatten(&self) -> Vec<f64> {
         vec![*self as f64]
     }
